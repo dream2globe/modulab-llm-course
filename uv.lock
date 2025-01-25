@@ -1084,6 +1084,7 @@ name = "modulab-llm-course"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "google-generativeai" },
     { name = "gradio", version = "5.3.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12.4'" },
     { name = "gradio", version = "5.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12.4'" },
     { name = "gradio-pdf" },
@@ -1092,10 +1093,12 @@ dependencies = [
     { name = "langchain-google-genai" },
     { name = "langchain-openai" },
     { name = "python-dotenv" },
+    { name = "tqdm" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "google-generativeai", specifier = ">=0.8.4" },
     { name = "gradio", specifier = ">=5.3.0" },
     { name = "gradio-pdf", specifier = ">=0.0.21" },
     { name = "ipykernel", specifier = ">=6.29.5" },
@@ -1103,6 +1106,7 @@ requires-dist = [
     { name = "langchain-google-genai", specifier = ">=2.0.9" },
     { name = "langchain-openai", specifier = ">=0.3.2" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
+    { name = "tqdm", specifier = ">=4.67.1" },
 ]
 
 [[package]]
